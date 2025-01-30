@@ -1,0 +1,444 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    color: white;
+}
+
+body{
+    background: url('./bg.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+/* before and after are pseudo elements */
+
+body::before{         
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.10);
+    backdrop-filter: blur(10px);
+}
+
+
+.main-container{
+    /* border: solid; */
+    width: 300px;
+    height: 496px;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0 ,0.15), rgba(255, 255, 255, 0.15));
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+} 
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding:10px;
+}
+
+.city-name{
+   width: 100%;
+   padding: 10px;
+   border-radius: 99px;
+   border: 3px solid transparent;
+   background: rgba(0, 0, 0 ,0.15);
+   outline: none;
+   padding-right: 45px;
+   text-transform:capitalize;
+}
+
+.city-name::placeholder{
+    color: (255,255,255,0.75);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.search-button{
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    padding-top:10px;
+    padding-right:9px ;
+    cursor: pointer;
+}
+
+
+.weather-div{
+    /* background-color: blue; */
+    height: 35px;
+    margin-top: 5px;
+    display: none;
+}
+
+.map-icon_and_name{
+    /* background-color: red;  */
+    display: flex;
+    height: 22px;
+    width: 50%;
+    align-items: center;
+    padding-left: 16px;
+}
+
+
+.map-icon_and_name .material-symbols-outlined{
+    width: 20%;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.map-icon_and_name .cityname h4{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.cityname_and_date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date{
+    /* background-color: rgb(0, 255, 60) ; */
+    width: 50%;
+    padding-left: 54px;
+    display: flex;
+    gap: 4px;
+    margin-right: 13px;
+    padding-left: 40px;
+    justify-content: flex-end;
+}
+.date h4{
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+}
+
+.location-not-found{
+    height: 400px;
+    width: 100%;
+    /* background-color: brown; */
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.location-not-found .not-found-text1 h3{
+    font-weight: 650;
+    font-size: 20px;
+    /* background-color: aqua; */
+    margin-top: 8px;
+}
+
+.location-not-found .not-found-image img{
+    height: 230px;
+    width: 230px;
+    /* background-color: yellowgreen; */
+    margin-top: 22px;
+}
+
+.not-found-text2 h3{
+    text-align: center;
+}
+
+.location-not-found .not-found-text2 h3{
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.location-not-found .not-found-text2 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.clear-sky-img-and-details{
+    width: 100%;
+    height: 100px;
+    /* background-color: blue; */
+    display: flex;
+    margin-top: 20px;
+}
+
+.clear-sky-img-and-details .clear-sky-img{
+    width: 50%;
+    /* background-color: aqua; */
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.temp-details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    text-align: end;
+    padding-top: 33px;
+    padding-right: 14px;
+}
+
+.temp-details .temp h3{
+    font-weight: 450;
+    font-size: 18px;
+}
+
+.temp-details .details h3{
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.weather-details{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgb(162, 255, 0); */
+    margin-top: 50px;
+}
+
+.humidity{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    /* background-color: rgb(0, 255, 13); */
+
+}
+
+.humidity-icon .material-symbols-outlined{
+    font-size: 25px;
+    /* background-color: aqua; */
+    margin-left: 21px;
+    margin-top: 5px;
+}
+
+.humidity-details .humidity-text h3{
+    font-weight: 400;
+    font-size: 13px;
+    /* background-color: rgb(0, 255, 55); */
+    margin-right: 40px;
+}
+
+.humidity-details .humidity-percentage h3{
+    font-weight: 700;
+    font-size: 13px;
+}
+
+
+
+
+
+
+.windspeed{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    /* background-color: blue; */
+
+}
+
+.windspeed-icon .material-symbols-outlined{
+    font-size: 25px;
+    /* background-color: aqua; */
+    margin-left: 30px;
+    margin-top: 2px;
+}
+
+.windspeed-details .windspeed-text h3{
+    font-weight: 400;
+    font-size: 13px;
+    /* background-color: rgb(0, 255, 55); */
+    margin-right: 11px;
+}
+
+.windspeed-details .windspeed-percentage h3{
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.whole-div{
+    width: 100%;
+    height: 370px;
+    /* background-color: rgba(255, 0, 0, 0.662); */
+    display: none;
+    
+}
+
+.three-div{
+    width: 100%;
+    height: 165px;
+    /* background-color: rgba(0, 255, 72, 0.297); */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.first-div{
+    width: 28%;
+    height: 130px;
+    background: linear-gradient(to top, rgba(0, 0, 0 ,0.15), rgba(255, 255, 255, 0.15));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 17px;
+}
+
+.first-div-date-month{
+    display: flex;
+    gap:2px
+}
+
+.first-div h4{
+   font-weight: 500;
+   font-size: 12px;
+   /* background-color: red; */
+   margin-top:10px;
+}
+
+.first-div .image-div img{
+    width: 40px;
+    /* background-color: red; */
+    margin-top: 8px;
+}
+
+.first-div .temp-div h3{
+    font-weight: 500;
+    font-size: 14px;
+/* background-color: red; */
+}
+
+
+
+
+.second-div{
+    width: 28%;
+    height: 130px;
+    background: linear-gradient(to top, rgba(0, 0, 0 ,0.15), rgba(255, 255, 255, 0.15));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 17px;
+}
+
+.second-div-date-month{
+    display: flex;
+    gap:2px
+}
+
+
+.second-div h4{
+font-weight: 500;
+font-size: 12px;
+/* background-color: red; */
+margin-top:10px;
+}
+
+.second-div .image-div img{
+    width: 40px;
+    /* background-color: red; */
+    margin-top: 8px;
+}
+
+.second-div .temp-div h3{
+    font-weight: 500;
+font-size: 14px;
+/* background-color: red; */
+}
+
+
+.third-div{
+    width: 28%;
+    height: 130px;
+    background: linear-gradient(to top, rgba(0, 0, 0 ,0.15), rgba(255, 255, 255, 0.15));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 17px;
+}
+
+.third-div-date-month{
+    display: flex;
+    gap:2px
+}
+
+.third-div h4{
+font-weight: 500;
+font-size: 12px;
+/* background-color: red; */
+margin-top:10px;
+}
+
+.third-div .image-div img{
+    width: 40px;
+    /* background-color: red; */
+    margin-top: 8px;
+}
+
+.third-div .temp-div h3{
+    font-weight: 500;
+font-size: 14px;
+/* background-color: red; */
+}
+
+
+.search-city{
+    height: 391px;
+    width: 100%;
+    /* background-color: rgba(165, 42, 42, 0.242); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 27px;
+    /* display: none; */
+}
+
+.search-city .not-found-text1 h3{
+    font-weight: 650;
+    font-size: 20px;
+    /* background-color: aqua; */
+    margin-top: 8px;
+}
+
+.search-city .search-city-image img{
+    height: 230px;
+    width: 230px;
+    /* background-color: yellowgreen; */
+    margin-top: 22px;
+}
+
+.not-found-text2 h3{
+    text-align: center;
+}
+
+.search-city .not-found-text2 h3{
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.search-city .not-found-text2 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
