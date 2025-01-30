@@ -106,25 +106,25 @@ async function checkWeather(city){
       windspeed_js.innerHTML = `${final_weather.wind.speed +" km/h"}`
 
       if(final_weather.weather[0].main == "Clouds"){
-        image1.src = "/clouds.png";
+        image1.src = "./clouds.PNG";
        }
        else if(final_weather.weather[0].main == "Clear"){
-        image1.src = "/clear.png";
+        image1.src = "./clear.PNG";
        }
        else if(final_weather.weather[0].main == "Snow"){
-        image1.src = "/snow.png";
+        image1.src = "./snow.PNG";
        }
        else if(final_weather.weather[0].main == "Rain"){
-        image1.src = "/rain.png";
+        image1.src = "./rain.PNG";
        }
        else if(final_weather.weather[0].main == "Drizzle"){
-        image1.src = "/drizzle.png";
+        image1.src = "./drizzle.PNG";
        }
        else if(final_weather.weather[0].main == "Snow"){
-        image1.src = "/snow.png";
+        image1.src = "./snow.PNG";
        }
        else if(final_weather.weather[0].main == "Thunderstorm"){
-        image1.src = "/thunderstorm.png";
+        image1.src = "./thunderstorm.PNG";
        }
 
        cityname.innerHTML = `${final_weather.name}`
@@ -349,42 +349,42 @@ async function forcastWeather(city){
 
 
     if(final_weather_2.list[4].weather[0].main == "Clouds"){
-      firstdiv_img.src = "/clouds.png";
-      seconddiv_img.src = "/clouds.png";
-      thirddiv_img.src = "/clouds.png";
+      firstdiv_img.src = "./clouds.PNG";
+      seconddiv_img.src = "./clouds.PNG";
+      thirddiv_img.src = "./clouds.PNG";
      }
      else if(final_weather_2.list[4].weather[0].main == "Clear"){
-      firstdiv_img.src = "/clear.png";
-      seconddiv_img.src = "/clear.png";
-      thirddiv_img.src = "/clear.png";
+      firstdiv_img.src = "./clear.PNG";
+      seconddiv_img.src = "./clear.PNG";
+      thirddiv_img.src = "./clear.PNG";
      }
      else if(final_weather_2.list[4].weather[0].main == "Snow"){
-      firstdiv_img.src = "/snow.png";
-      seconddiv_img.src = "/snow.png";
-      thirddiv_img.src = "/snow.png";
+      firstdiv_img.src = "./snow.PNG";
+      seconddiv_img.src = "./snow.PNG";
+      thirddiv_img.src = "./snow.PNG";
 
      }
      else if(final_weather_2.list[4].weather[0].main == "Rain"){
-      firstdiv_img.src = "/rain.png";
-      seconddiv_img.src = "/rain.png";
-      thirddiv_img.src = "/rain.png";
+      firstdiv_img.src = "./rain.PNG";
+      seconddiv_img.src = "./rain.PNG";
+      thirddiv_img.src = "./rain.PNG";
      }
      else if(final_weather_2.list[4].weather[0].main == "Drizzle"){
-      firstdiv_img.src = "/drizzle.png";
-      seconddiv_img.src = "/drizzle.png";
-      thirddiv_img.src = "/drizzle.png";
+      firstdiv_img.src = "./drizzle.PNG";
+      seconddiv_img.src = "./drizzle.PNG";
+      thirddiv_img.src = "./drizzle.PNG";
 
      }
      else if(final_weather_2.list[4].weather[0].main == "Snow"){
-      firstdiv_img.src = "/snow.png";
-      seconddiv_img.src = "/snow.png";
-      thirddiv_img.src = "/snow.png";
+      firstdiv_img.src = "./snow.PNG";
+      seconddiv_img.src = "./snow.PNG";
+      thirddiv_img.src = "./snow.PNG";
 
      }
      else if(final_weather_2.list[4].weather[0].main == "Thunderstorm"){
-      firstdiv_img.src = "/thunderstorm.png";
-      seconddiv_img.src = "/thunderstorm.png";
-      thirddiv_img.src = "/thunderstorm.png";
+      firstdiv_img.src = "./thunderstorm.PNG";
+      seconddiv_img.src = "./thunderstorm.PNG";
+      thirddiv_img.src = "./thunderstorm.PNG";
 
      }
 }
